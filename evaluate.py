@@ -11,7 +11,8 @@ from sklearn.metrics import roc_auc_score
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1"
 
-strategy = tf.distribute.MirroredStrategy(devices=["GPU:0", "GPU:1"])
+strategy = tf.distribute.MirroredStrategy(devices=["GPU:0", "GPU:1", "GPU:2", "GPU:3"])
+
 
 max_len = 512
 
